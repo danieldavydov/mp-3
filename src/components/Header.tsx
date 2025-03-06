@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-// Styles for header tag
+// Styled header tag
 const MainHeader = styled.header`
   display: flex;
   flex-direction: column;
@@ -9,19 +9,21 @@ const MainHeader = styled.header`
   border-bottom: 1px dashed black;
 `;
 
+// Styled h1 tag for header
 const HeaderTitle = styled.h1`
   font-family: "WindSong", serif;
 `;
 
+// Styled p tag for header
 const HeaderContent = styled.p`
   font-style: italic;
 `;
 
 export default function Header() {
   return (
-    <div>
-      <h1>something</h1>
-      <p>something</p>
-    </div>
+    <MainHeader>
+      <HeaderTitle>Daniel Davydov</HeaderTitle>
+      <HeaderContent>Online Resume</HeaderContent>
+    </MainHeader>
   );
 }
