@@ -6,6 +6,7 @@ import ContentWrapper from "./ui-components/ContentWrapper";
 import StyledMain from "./ui-components/StyledMain";
 import StyledText from "./ui-components/StyledText";
 import PageTitle from "./ui-components/PageTitle";
+import { useEffect } from "react";
 
 const ContentDiv = styled.div`
   @media screen and (max-width: 750px) {
@@ -54,6 +55,9 @@ const Timeline = styled.h6`
 `;
 
 export default function Employment() {
+  useEffect(() => {
+    document.title = "Employment | Resume";
+  }, []);
   return (
     <>
       <Header />

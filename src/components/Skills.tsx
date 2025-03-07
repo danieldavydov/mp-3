@@ -6,6 +6,7 @@ import ContentWrapper from "./ui-components/ContentWrapper";
 import StyledMain from "./ui-components/StyledMain";
 import StyledText from "./ui-components/StyledText";
 import PageTitle from "./ui-components/PageTitle";
+import { useEffect } from "react";
 
 const ContentDiv = styled.div`
   @media screen and (max-width: 750px) {
@@ -40,6 +41,10 @@ const Title = styled.h4`
 `;
 
 export default function Skills() {
+  useEffect(() => {
+    document.title = "Skills | Resume";
+  }, []);
+
   return (
     <>
       <Header />

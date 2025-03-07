@@ -8,6 +8,7 @@ import StyledText from "./ui-components/StyledText";
 import PageTitle from "./ui-components/PageTitle";
 import ProjectLink from "./ui-components/ProjectLink";
 import Calculator from "./ui-components/Calculator";
+import { useEffect } from "react";
 
 const ContentDiv = styled.div`
   border-bottom: 1px dashed black;
@@ -51,6 +52,10 @@ const TechStack = styled.h5`
 `;
 
 export default function Projects() {
+  useEffect(() => {
+    document.title = "Projects | Resume";
+  }, []);
+
   return (
     <>
       <Header />
