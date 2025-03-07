@@ -5,7 +5,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import HomePage from "./components/HomePage";
+import Home from "./components/Home";
 
 // PageWrapper mocks #page-wrapper
 const PageWrapper = styled.div`
@@ -18,7 +18,7 @@ function Root() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </>
   );

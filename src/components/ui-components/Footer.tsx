@@ -20,7 +20,7 @@ export default function Footer() {
     <MainFooter>
       <p>
         All Rights Reserved by Daniel Davydov{" "}
-        <Link to={"/credits"}>Credits</Link> &copy;
+        <StyledLink to={"/credits"}>Credits</StyledLink> &copy;
       </p>
     </MainFooter>
   );

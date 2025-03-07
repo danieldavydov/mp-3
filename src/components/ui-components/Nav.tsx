@@ -5,6 +5,11 @@ import styled from "styled-components";
 const Navigation = styled.nav`
   width: 30%;
   border-right: 1px dashed black;
+
+  @media screen and (max-width: 750px) {
+    width: 100%;
+    border-bottom: 1px dashed black;
+  }
 `;
 
 // Styled ul tag for nav
@@ -16,6 +21,15 @@ const NavList = styled.ul`
   text-align: center;
   list-style: none;
   padding-left: 0;
+
+  @media screen and (max-width: 750px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #88a2be;
+    list-style: none;
+    padding-left: 0;
+  }
 `;
 
 // Styled li tag for nav
@@ -32,6 +46,13 @@ const NavItem = styled.li`
     background-color: #7895b5;
     transition: 0.2s ease;
   }
+
+  @media screen and (max-width: 750px) {
+    font-size: calc(2px + 1.5vw);
+    background-color: #b9c9d9;
+    padding: 1% 0.5%;
+    margin: 1% 0.5%;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -40,6 +61,11 @@ const StyledLink = styled(Link)`
 
   &:hover {
     font-style: italic;
+  }
+
+  @media screen and (max-width: 750px) {
+    font-family: "Delius", serif;
+    text-decoration: none;
   }
 `;
 

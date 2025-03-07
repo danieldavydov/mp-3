@@ -7,6 +7,11 @@ const MainHeader = styled.header`
   background-color: #7895b5;
   padding: 1vh 2vw;
   border-bottom: 1px dashed black;
+
+  @media screen and (max-width: 750px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 // Styled h1 tag for header
