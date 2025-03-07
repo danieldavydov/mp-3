@@ -81,6 +81,32 @@ export default function Calculator() {
     setResult(String(Number(first) * Number(second)));
   }
 
+  function doPower() {
+    const firstNum = Number(first);
+    const secondNum = Number(second);
+    let power = 1;
+    let bounds = secondNum;
+
+    if (secondNum < 0) {
+      bounds *= -1;
+    }
+
+    for (let i = 1; i <= bounds; i++) {
+      power = power * firstNum;
+    }
+
+    if (secondNum < 0) {
+      power = 1 / power;
+    }
+    setResult(String(power));
+  }
+
+  function doClear() {
+    setFirst("");
+    setSecond("");
+    setResult("");
+  }
+
   return (
     <CalcWrapper>
       <ProjectTitle>Calculator</ProjectTitle>
@@ -111,10 +137,10 @@ export default function Calculator() {
           <button type="button" onClick={doMultiply}>
             *
           </button>
-          <button type="button" onClick={doAdd}>
+          <button type="button" onClick={doPower}>
             **
           </button>
-          <button type="button" onClick={doAdd}>
+          <button type="button" onClick={doClear}>
             Clear
           </button>
         </CalcButtons>
