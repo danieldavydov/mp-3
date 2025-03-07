@@ -8,6 +8,7 @@ import {
 import Home from "./components/Home";
 import Education from "./components/Education";
 import Employment from "./components/Employment";
+import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Hobbies from "./components/Hobbies";
 
@@ -25,6 +26,7 @@ function Root() {
         <Route path="/" element={<Home />} />
         <Route path="/education" element={<Education />} />
         <Route path="/employment" element={<Employment />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/hobbies" element={<Hobbies />} />
       </Routes>
