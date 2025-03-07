@@ -6,7 +6,6 @@ import ContentWrapper from "./ui-components/ContentWrapper";
 import StyledMain from "./ui-components/StyledMain";
 import StyledText from "./ui-components/StyledText";
 import PageTitle from "./ui-components/PageTitle";
-import me from "/me.jpeg";
 
 const ContentDiv = styled.div`
   @media screen and (max-width: 750px) {
