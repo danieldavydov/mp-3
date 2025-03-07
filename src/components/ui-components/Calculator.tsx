@@ -49,22 +49,6 @@ export default function Calculator() {
   const [second, setSecond] = useState("");
   const [result, setResult] = useState("");
 
-  function display(result: number) {
-    const output = document.getElementById("output");
-    if (output != null) {
-      output.innerHTML = String(result);
-
-      // color red
-      if (result < 0) {
-        output.style.color = "red";
-      }
-      // color black
-      else {
-        output.style.color = "black";
-      }
-    }
-  }
-
   function doAdd() {
     setResult(String(Number(first) + Number(second)));
   }
