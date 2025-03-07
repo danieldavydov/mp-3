@@ -107,33 +107,33 @@ export default function Calculator() {
           value={second}
           onChange={(e) => setSecond(e.target.value)}
         />
-
-        <CalcButtons>
-          <button type="button" onClick={doAdd}>
-            +
-          </button>
-          <button type="button" onClick={doSubtract}>
-            -
-          </button>
-          <button type="button" onClick={doDivision}>
-            /
-          </button>
-          <button type="button" onClick={doMultiply}>
-            *
-          </button>
-          <button type="button" onClick={doPower}>
-            **
-          </button>
-          <button type="button" onClick={doClear}>
-            Clear
-          </button>
-        </CalcButtons>
-
-        {result !== null && Number(result) > 0 && <p>{result}</p>}
-        {result !== null && Number(result) < 0 && (
-          <NegativeOutput>{result}</NegativeOutput>
-        )}
       </Boxes>
+
+      <CalcButtons>
+        <button type="button" onClick={doAdd}>
+          +
+        </button>
+        <button type="button" onClick={doSubtract}>
+          -
+        </button>
+        <button type="button" onClick={doDivision}>
+          /
+        </button>
+        <button type="button" onClick={doMultiply}>
+          *
+        </button>
+        <button type="button" onClick={doPower}>
+          **
+        </button>
+        <button type="button" onClick={doClear}>
+          Clear
+        </button>
+      </CalcButtons>
+
+      {result !== null && Number(result) > 0 && <p>{result}</p>}
+      {result !== null && Number(result) < 0 && (
+        <NegativeOutput>{result}</NegativeOutput>
+      )}
     </CalcWrapper>
   );
 }
