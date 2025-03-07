@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import StyledText from "./StyledText";
 
 const CalcWrapper = styled.div`
   background-image: url("https://media3.giphy.com/media/MyWrJJIdAfoJuEPlLP/200w.gif?cid=6c09b9522770ik2eoh4i6i597cgfcao2umys7xg1rtkdh1kq&ep=v1_gifs_search&rid=200w.gif&ct=g");
@@ -40,7 +41,7 @@ const CalcButtons = styled.div`
   gap: 1vh;
 `;
 
-const NegativeOutput = styled.p`
+const NegativeOutput = styled(StyledText)`
   color: red;
 `;
 
@@ -130,7 +131,9 @@ export default function Calculator() {
         </button>
       </CalcButtons>
 
-      {result !== null && Number(result) > 0 && <p>{result}</p>}
+      {result !== null && Number(result) > 0 && (
+        <StyledText>{result}</StyledText>
+      )}
       {result !== null && Number(result) < 0 && (
         <NegativeOutput>{result}</NegativeOutput>
       )}
