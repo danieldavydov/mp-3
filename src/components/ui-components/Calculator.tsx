@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 const CalcWrapper = styled.div`
@@ -32,12 +33,96 @@ const CalcLabels = styled.label`
   color: black;
 `;
 
+const CalcButtons = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1vh;
+`;
+
+const NegativeOutput = styled.p`
+  color: red;
+`;
+
 export default function Calculator() {
+  const [first, setFirst] = useState("");
+  const [second, setSecond] = useState("");
+  const [result, setResult] = useState("");
+
+  function display(result: number) {
+    const output = document.getElementById("output");
+    if (output != null) {
+      output.innerHTML = String(result);
+
+      // color red
+      if (result < 0) {
+        output.style.color = "red";
+      }
+      // color black
+      else {
+        output.style.color = "black";
+      }
+    }
+  }
+
+  function doAdd() {
+    setResult(String(Number(first) + Number(second)));
+  }
+
+  function doSubtract() {
+    setResult(String(Number(first) - Number(second)));
+  }
+
+  function doDivision() {
+    setResult(String(Number(first) / Number(second)));
+  }
+
+  function doMultiply() {
+    setResult(String(Number(first) * Number(second)));
+  }
+
   return (
     <CalcWrapper>
       <ProjectTitle>Calculator</ProjectTitle>
       <Boxes>
         <CalcLabels>First Number:</CalcLabels>
+        <input
+          type="text"
+          value={first}
+          onChange={(e) => setFirst(e.target.value)}
+        />
+        <CalcLabels>Second Number:</CalcLabels>
+        <input
+          type="text"
+          value={second}
+          onChange={(e) => setSecond(e.target.value)}
+        />
+
+        <CalcButtons>
+          <button type="button" onClick={doAdd}>
+            +
+          </button>
+          <button type="button" onClick={doSubtract}>
+            -
+          </button>
+          <button type="button" onClick={doDivision}>
+            /
+          </button>
+          <button type="button" onClick={doMultiply}>
+            *
+          </button>
+          <button type="button" onClick={doAdd}>
+            **
+          </button>
+          <button type="button" onClick={doAdd}>
+            Clear
+          </button>
+        </CalcButtons>
+
+        {result !== null && Number(result) > 0 && <p>{result}</p>}
+        {result !== null && Number(result) < 0 && (
+          <NegativeOutput>{result}</NegativeOutput>
+        )}
       </Boxes>
     </CalcWrapper>
   );
