@@ -6,6 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from "./components/Home";
+import Education from "./components/Education";
 
 // PageWrapper mocks #page-wrapper
 const PageWrapper = styled.div`
@@ -19,6 +20,7 @@ function Root() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/education" element={<Education />} />
       </Routes>
     </>
   );
