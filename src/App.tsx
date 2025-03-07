@@ -8,6 +8,7 @@ import {
 import Home from "./components/Home";
 import Education from "./components/Education";
 import Employment from "./components/Employment";
+import Skills from "./components/Skills";
 
 // PageWrapper mocks #page-wrapper
 const PageWrapper = styled.div`
@@ -23,6 +24,7 @@ function Root() {
         <Route path="/" element={<Home />} />
         <Route path="/education" element={<Education />} />
         <Route path="/employment" element={<Employment />} />
+        <Route path="/skills" element={<Skills />} />
       </Routes>
     </>
   );
