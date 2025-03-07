@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import Nav from "./components/Nav";
 import {
   Routes,
   Route,
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import HomePage from "./components/HomePage";
 
 // PageWrapper mocks #page-wrapper
 const PageWrapper = styled.div`
@@ -14,10 +14,22 @@ const PageWrapper = styled.div`
   min-height: 100vh;
 `;
 
+function Root() {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </>
+  );
+}
+
+const router = createBrowserRouter([{ path: "*", Component: Root }]);
+
 export default function App() {
   return (
     <PageWrapper>
-      <p>Something here</p>
+      <RouterProvider router={router} />
     </PageWrapper>
   );
 }

@@ -27,6 +27,20 @@ const NavItem = styled.li`
   padding: 1vh 0;
   margin: 4vh auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
+
+  &:hover {
+    background-color: #7895b5;
+    transition: 0.2s ease;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  font-family: "Delius", serif;
+  text-decoration: none;
+
+  &:hover {
+    font-style: italic;
+  }
 `;
 
 export default function Nav() {
@@ -34,27 +48,27 @@ export default function Nav() {
     <Navigation>
       <NavList>
         <NavItem>
-          <Link to={"/"}>Home</Link>
+          <StyledLink to="/">Home</StyledLink>
         </NavItem>
 
         <NavItem>
-          <Link to={"/education"}>Education</Link>
+          <StyledLink to="/education">Education</StyledLink>
         </NavItem>
 
         <NavItem>
-          <Link to={"/employment"}>Employment</Link>
+          <StyledLink to="/employment">Employment</StyledLink>
         </NavItem>
 
         <NavItem>
-          <Link to={"/projects"}>Projects</Link>
+          <StyledLink to="/projects">Projects</StyledLink>
         </NavItem>
 
         <NavItem>
-          <Link to={"/skills"}>Skills</Link>
+          <StyledLink to="/skills">Skills</StyledLink>
         </NavItem>
 
         <NavItem>
-          <Link to={"/hobbies"}>Hobbies</Link>
+          <StyledLink to="/hobbies">Hobbies</StyledLink>
         </NavItem>
       </NavList>
     </Navigation>
